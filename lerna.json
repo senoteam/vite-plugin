@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "useNx": true,
+  "useWorkspaces": true,
+  "command": {
+    "version": {
+      "allowBranch": ["main", "next", "v*"]
+    },
+    "publish": {
+      "message": "chore: publish new version"
+    }
+  },
+  "ignoreChanges": ["**/__tests__/**", "**/package-lock.json"]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@senojs/rollup-plugin-style-inject",
+  "version": "0.0.0",
+  "description": "rollup-plugin-style-inject",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/senoteam/vite-plugin.git",
+    "directory": "packages/style-inject"
+  },
+  "keywords": [
+    "seno",
+    "rollup-plugin",
+    "vite-plugin"
+  ],
+  "author": "htmlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/senoteam/vite-plugin/issues"
+  },
+  "homepage": "https://github.com/senoteam/vite-plugin#readme"
+}
