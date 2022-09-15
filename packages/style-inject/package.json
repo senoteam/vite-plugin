@@ -1,6 +1,6 @@
 {
   "name": "@senojs/rollup-plugin-style-inject",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "rollup-plugin-style-inject",
   "type": "module",
   "main": "index.js",
