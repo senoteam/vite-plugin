@@ -4,6 +4,9 @@
   "description": "rollup-plugin-style-inject",
   "type": "module",
   "main": "index.js",
+  "engines": {
+    "node": ">=12"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/senoteam/vite-plugin/issues"
   },
-  "homepage": "https://github.com/senoteam/vite-plugin#readme",
+  "homepage": "https://github.com/senoteam/vite-plugin/tree/main/packages/style-inject",
   "publishConfig": {
     "access": "public"
   }

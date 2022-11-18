@@ -3,33 +3,39 @@ import path from 'node:path'
 const cssInjectorText = `
 function injectStyle(css, insertAt = 'top') {
   if (!css || typeof document === 'undefined') return
-  const head = document.head
+  const head = document.head || document.querySelector('head')
+  const firstChild = head.querySelector(':first-child')
   const style = document.createElement('style')
-  if (insertAt === 'top' && head.firstChild) {
-    head.insertBefore(style, head.firstChild)
+  style.appendChild(document.createTextNode(css))
+  if (insertAt === 'top' && firstChild) {
+    head.insertBefore(style, firstChild)
   } else {
     head.appendChild(style)
   }
-  style.appendChild(document.createTextNode(css))
 }
 `
 
 export default ({ insertAt = 'top' } = {}) => {
   const cssCodes = []
+  const cssLangs = ['.css', '.less']
   return {
     name: '@senojs/rollup-plugin-style-inject',
     apply: 'build',
     transform(code, id) {
-      const isCSS = path.extname(id) === '.css'
+      const isCSS = cssLangs.includes(path.extname(id))
       if (isCSS) {
         cssCodes.push(code)
+        return { code: '', map: null }
       }
-      return { code: isCSS ? '' : code, map: null }
     },
     footer: cssInjectorText,
     renderChunk(code, chunk) {
       if (chunk.isEntry) {
-        const injections = cssCodes.map((v) => `injectStyle(\`${v}\`, '${insertAt}')`).join('\n')
+        const cssString = cssCodes
+          .join('')
+          .replace(/ *\\9/g, '')
+          .replace(/\\(\d+)/g, '0o$1')
+        const injections = `injectStyle(\`${cssString}\`, '${insertAt}')`
         return { code: code + injections, map: null }
       }
     },
