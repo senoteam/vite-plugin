@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.1.1...@senojs/rollup-plugin-style-inject@0.2.0) (2022-11-18)
+
+
+### Features
+
+* **style-inject:** 🌟 support for transform less files ([845ed09](https://github.com/senoteam/vite-plugin/commit/845ed09edc7b8c8e908af8c956b9b78f30cd638c))
+
+
+
+
+
 ## [0.1.1](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.1.0...@senojs/rollup-plugin-style-inject@0.1.1) (2022-09-15)
 
 
