@@ -37,7 +37,7 @@ export default ({ insertAt = 'top' } = {}) => {
           .join('')
           .replace(/ *\\9/g, '') // remove hack code for IE9
           .replace(/\\(\d+)/g, '0o$1')
-        const injections = `injectStyle(\`${cssString}\`, '${insertAt}')`
+        const injections = `injectStyle(${JSON.stringify(cssString)}, '${insertAt}')`
         return { code: code + injections, map: null }
       }
     },
