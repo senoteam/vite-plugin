@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.2.1...@senojs/rollup-plugin-style-inject@0.2.2) (2022-12-21)
+
+
+### Bug Fixes
+
+* 🐞 `\a0` conversion error ([53ebe28](https://github.com/senoteam/vite-plugin/commit/53ebe280b41f1530661a29fe9863248c1c3b9db1))
+
+
+
+
+
 ## [0.2.1](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.2.0...@senojs/rollup-plugin-style-inject@0.2.1) (2022-12-08)
 
 
