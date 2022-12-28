@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.2.2...@senojs/rollup-plugin-style-inject@0.2.3) (2022-12-28)
+
+
+### Reverts
+
+* Revert "perf: 🧊 fixed output order of css" ([5ad8c91](https://github.com/senoteam/vite-plugin/commit/5ad8c9194203540f707b3851137d4f00879834e4))
+
+
+
+
+
 ## [0.2.2](https://github.com/senoteam/vite-plugin/compare/@senojs/rollup-plugin-style-inject@0.2.1...@senojs/rollup-plugin-style-inject@0.2.2) (2022-12-21)
 
 
