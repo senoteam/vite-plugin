@@ -16,7 +16,7 @@ function injectStyle(css, insertAt = 'top') {
 `
 
 export default ({ insertAt = 'top' } = {}) => {
-  const cssCodes = {}
+  const cssCodes = []
   const cssLangs = ['.css', '.less']
   return {
     name: '@senojs/rollup-plugin-style-inject',
@@ -24,18 +24,16 @@ export default ({ insertAt = 'top' } = {}) => {
     transform(code, id) {
       const isCSS = cssLangs.includes(path.extname(id))
       if (isCSS) {
-        cssCodes[id] = code
+        cssCodes.push(code)
         return { code: '', map: null }
       }
     },
     footer: cssInjectorText,
     renderChunk(code, chunk) {
       if (chunk.isEntry) {
-        const cssIDs = Object.keys(cssCodes).sort()
-        const cssString = cssIDs
-          .map((id) => cssCodes[id])
+        const cssString = cssCodes
           .join('')
-          .replace(/ *\\9/g, '') // remove hack code for IE9
+          .replace(/ *\\9/g, '')
           .replace(/\\(\d+)/g, '0o$1')
         const injections = `injectStyle(${JSON.stringify(cssString)}, '${insertAt}')`
         return { code: code + injections, map: null }
