@@ -1,13 +1,11 @@
 .husky/
-dist/
-docs/
-node_modules/
-_*
+
 .*
 !.storybook/
 *.jpg
 *.png
 *.svg
-browserslist
+*.woff2
 LICENSE
 package*.json
+pnpm-lock.yaml

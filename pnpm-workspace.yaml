@@ -1,0 +1,10 @@
+packages:
+  - "packages/*"
+
+publicHoistPattern:
+  - "@types/*"
+  - "*prettier*"
+
+packageManagerStrictVersion: true
+resolutionMode: time-based
+verifyDepsBeforeRun: warn

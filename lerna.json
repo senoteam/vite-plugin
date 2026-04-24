@@ -1,7 +1,7 @@
 {
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
   "version": "independent",
-  "useNx": true,
-  "useWorkspaces": true,
   "command": {
     "version": {
       "allowBranch": ["main", "next", "v*"]
@@ -9,6 +9,5 @@
     "publish": {
       "message": "chore: publish new version"
     }
-  },
-  "ignoreChanges": ["**/__tests__/**", "**/package-lock.json"]
+  }
 }

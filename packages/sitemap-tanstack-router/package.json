@@ -1,0 +1,55 @@
+{
+  "name": "@senojs/vite-plugin-sitemap-tanstack-router",
+  "version": "0.0.0",
+  "description": "Vite plugin to generate sitemap.xml from TanStack Router route tree",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "vite build",
+    "watch": "vite build --watch",
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/senoteam/vite-plugin.git",
+    "directory": "packages/sitemap-tanstack-router"
+  },
+  "keywords": [
+    "seno",
+    "vite-plugin",
+    "sitemap",
+    "tanstack-router",
+    "seo"
+  ],
+  "author": "Holden <htmlin@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/senoteam/vite-plugin/issues"
+  },
+  "homepage": "https://github.com/senoteam/vite-plugin/tree/main/packages/sitemap-tanstack-router",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vite": ">=5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "vite": "^7.3.2",
+    "vite-plugin-dts": "^4.5.4",
+    "vitest": "^3.2.4"
+  }
+}

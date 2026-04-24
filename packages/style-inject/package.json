@@ -20,7 +20,7 @@
     "rollup-plugin",
     "vite-plugin"
   ],
-  "author": "htmlin",
+  "author": "Holden <htmlin@qq.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/senoteam/vite-plugin/issues"
